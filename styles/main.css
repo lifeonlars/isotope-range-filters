@@ -1,0 +1,76 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body { font-family: sans-serif; }
+
+
+.btn {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.btn:hover {
+  background-color: ccc;
+  text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+  color: #222;
+}
+.btn:active,
+.btn.is-checked {
+  background-color: #2175b0;
+  color: #fff;
+}
+
+/* --------------------------------------- */
+/* Isotope Grid */
+/* --------------------------------------- */
+.grid {
+  background: #EEE;
+  max-width: 1200px;
+}
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* --------------------------------------- */
+/* Isotope item */
+/* --------------------------------------- */
+.item {
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  float: left;
+  text-align: center;
+}
+.item.round { border-radius: 35px; }
+.item.big.round { border-radius: 75px; }
+
+.item.red { background: #b0221b; }
+.item.blue { background: #2175b0; }
+.item.yellow { background: #e8ce3c; }
+
+.item.wide,
+.item.big { width: 150px; }
+.item.tall,
+.item.big { height: 150px; }
+
+.item .content {
+  color: #fff;
+  font-size: 10px;
+  padding-top: 20px;
+  display: inline-block;
+}
+
+/* --------------------------------------- */
+/* Bootstrap Slider */
+/* --------------------------------------- */
+.sliders { padding: 15px 0 30px 0; }
+.filter-section .filter-label {
+  display: block;
+  font-weight: bold;
+}
+.bootstrap-slider .slider-selection { background: #2175b0; }
+

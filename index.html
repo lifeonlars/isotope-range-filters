@@ -1,0 +1,136 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Isotope Range Sliders with Combination Filters</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Load Bootstrap and Bootstrap Range Slider CSS via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/css/bootstrap-slider.min.css" />
+
+    <!-- Custom CSS for this page -->
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <header class="jumbotron">
+        <div class="container">
+
+            <h1>Range Sliders with Combo Filters</h1>
+            <p>Combination filters with range sliders. Using <a href="http://getbootstrap.com/">Bootstrap 3</a> and <a href="https://github.com/seiyria/bootstrap-slider" target="_blank">Bootstrap Slider</a> as well as <a href="http://isotope.metafizzy.co/" target="_blank">Isotope</a>.</p>
+        </div>
+    </header>
+
+    <section class="container">
+    <div class="filters filter-section">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="filter-label">Color:</span>
+                <div class="btn-group" role="group" data-filter-group="color">
+                    <span class="btn btn-sm btn-default btn-filter is-checked" data-filter="">Any</span>
+                    <span class="btn btn-sm btn-default btn-filter" data-filter=".red">Red</span>
+                    <span class="btn btn-sm btn-default btn-filter" data-filter=".blue">Blue</span>
+                    <span class="btn btn-sm btn-default btn-filter" data-filter=".yellow">Yellow</span>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <span class="filter-label">Size:</span>
+                <div class="btn-group" role="group" data-filter-group="size">
+                    <span class="btn btn-sm btn-default btn-filter is-checked" data-filter="">Any</span>
+                    <span class="btn btn-sm btn-default btn-filter" data-filter=".small">Small</span>
+                    <span class="btn btn-sm btn-default btn-filter" data-filter=".wide">Wide</span>
+                    <span class="btn btn-sm btn-default btn-filter" data-filter=".big">Big</span>
+                    <span class="btn btn-sm btn-default btn-filter" data-filter=".tall">Tall</span>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <span class="filter-label">Shape:</span>
+                <div class="btn-group" role="group" data-filter-group="shape">
+                    <span class="btn btn-sm btn-default btn-filter is-checked" data-filter="">Any</span>
+                    <span class="btn btn-sm btn-default btn-filter" data-filter=".round">Round</span>
+                    <span class="btn btn-sm btn-default btn-filter" data-filter=".square">Square</span>
+                </div>
+            </div>
+        </div>
+        <div class="sliders row">
+            <div class="col-sm-4">
+                <div class="bootstrap-slider">
+                    <span class="filter-label">Weight Range: <span class="filter-selection"></span></span>
+                    <b class="filter-min">40</b> <input id="filter-weight" type="text" class="bootstrap-slider" value="" data-filter-group="weight"> <b class="filter-max">150</b>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="bootstrap-slider">
+                    <span class="filter-label">Height Range: <span class="filter-selection"></span> </span>
+                    <b>140</b><input id="filter-height" type="text" class="bootstrap-slider" value="" data-slider-step="1" data-filter-group="height"> <b>220</b>
+                </div>
+            </div>
+        </div>
+
+        <!-- This is the Isotope grid that contains all the elements to be filtered
+             The JS references the item class to define which element to sort, filter and apply masonry layout to
+             The item class could be renamed to anything you want e.g. card, product etc. and the JS from itemSelector: '.item'
+        -->
+        <div class="grid">
+            <div class="item small round red" data-height="180" data-weight="75"><span class="content">Height:180<br>Weight: 75</span></div>
+            <div class="item small round blue" data-height="179" data-weight="73"><span class="content">Height:179<br>Weight: 73</span></div>
+            <div class="item small round yellow" data-height="162" data-weight="53"><span class="content">Height:162<br>Weight: 53</span></div>
+            <div class="item small square red" data-height="173" data-weight="62"><span class="content">Height:173<br>Weight: 62</span></div>
+            <div class="item small square blue" data-height="192" data-weight="95"><span class="content">Height:192<br>Weight: 95</span></div>
+            <div class="item small square yellow" data-height="185" data-weight="83"><span class="content">Height:185<br>Weight: 83</span></div>
+            <div class="item wide round red" data-height="170" data-weight="93"><span class="content">Height:170<br>Weight: 93</span></div>
+            <div class="item wide round blue" data-height="150" data-weight="50"><span class="content">Height:150<br>Weight: 50</span></div>
+            <div class="item wide round yellow" data-height="176" data-weight="61"><span class="content">Height:176<br>Weight: 61</span></div>
+            <div class="item wide square red" data-height="155" data-weight="56"><span class="content">Height:155<br>Weight: 56</span></div>
+            <div class="item wide square blue" data-height="188" data-weight="87"><span class="content">Height:188<br>Weight: 87</span></div>
+            <div class="item wide square yellow" data-height="192" data-weight="89"><span class="content">Height:192<br>Weight: 89</span></div>
+            <div class="item big round red" data-height="183" data-weight="88"><span class="content">Height:183<br>Weight: 88</span></div>
+            <div class="item big round blue" data-height="189" data-weight="91"><span class="content">Height:189<br>Weight: 91</span></div>
+            <div class="item big round yellow" data-height="178" data-weight="80"><span class="content">Height:178<br>Weight: 80</span></div>
+            <div class="item big square red" data-height="156" data-weight="49"><span class="content">Height:156<br>Weight: 49</span></div>
+            <div class="item big square blue" data-height="157" data-weight="58"><span class="content">Height:157<br>Weight: 58</span></div>
+            <div class="item big square yellow" data-height="166" data-weight="60"><span class="content">Height:166<br>Weight: 60</span></div>
+            <div class="item tall round red" data-height="163" data-weight="59"><span class="content">Height:163<br>Weight: 59</span></div>
+            <div class="item tall round blue" data-height="161" data-weight="53"><span class="content">Height:161<br>Weight: 53</span></div>
+            <div class="item tall round yellow" data-height="160" data-weight="51"><span class="content">Height:160<br>Weight: 51</span></div>
+            <div class="item tall square red" data-height="170" data-weight="70"><span class="content">Height:170<br>Weight: 70</span></div>
+            <div class="item tall square blue" data-height="175" data-weight="73"><span class="content">Height:175<br>Weight: 73</span></div>
+            <div class="item tall square yellow" data-height="173" data-weight="67"><span class="content">Height:173<br>Weight: 67</span></div>
+            <div class="item wide round red" data-height="181" data-weight="85"><span class="content">Height:181<br>Weight: 85</span></div>
+            <div class="item small round blue" data-height="172" data-weight="63"><span class="content">Height:172<br>Weight: 63</span></div>
+            <div class="item small round blue" data-height="152" data-weight="51"><span class="content">Height:152<br>Weight: 51</span></div>
+            <div class="item small square yellow" data-height="173" data-weight="62"><span class="content">Height:173<br>Weight: 62</span></div>
+            <div class="item small square blue" data-height="192" data-weight="95"><span class="content">Height:192<br>Weight: 95</span></div>
+            <div class="item small square yellow" data-height="185" data-weight="83"><span class="content">Height:185<br>Weight: 83</span></div>
+            <div class="item small square red" data-height="170" data-weight="93"><span class="content">Height:170<br>Weight: 93</span></div>
+            <div class="item big round blue" data-height="150" data-weight="50"><span class="content">Height:150<br>Weight: 50</span></div>
+            <div class="item tall round yellow" data-height="176" data-weight="61"><span class="content">Height:176<br>Weight: 61</span></div>
+            <div class="item tall square red" data-height="155" data-weight="56"><span class="content">Height:155<br>Weight: 56</span></div>
+            <div class="item big square blue" data-height="188" data-weight="87"><span class="content">Height:188<br>Weight: 87</span></div>
+            <div class="item wide square red" data-height="192" data-weight="89"><span class="content">Height:192<br>Weight: 89</span></div>
+        </div>
+    </section>
+
+    <!-- Load external JS dependencies
+        - jQuery first, followed by Isotope and then Bootstrap and the Bootstrap range slider plugin
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/bootstrap-slider.js"></script>
+
+    <!-- Finally load custom JS for this page -->
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>
