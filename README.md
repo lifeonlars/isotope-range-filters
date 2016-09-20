@@ -12,3 +12,7 @@ Feel free to use and modify for your own projects.
 * [Isotope v2](http://isotope.metafizzy.co/) 
 * [Bootstrap 3](http://getbootstrap.com/)
 * [Bootstrap Slider](https://github.com/seiyria/bootstrap-slider)
+
+### Demo ###
+
+[Demo is available on CodePen](https://codepen.io/lifeonlars/pen/yaaOZy)
