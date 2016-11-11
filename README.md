@@ -4,6 +4,8 @@
 
 Working prototype for using min/max range sliders combined with the standard Isotope combination filters. 
 
+Can be modified easily to use different filter sets or facets.
+
 Feel free to use and modify for your own projects. 
 
 ### External Dependencies ###
